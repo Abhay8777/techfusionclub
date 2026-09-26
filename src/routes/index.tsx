@@ -52,84 +52,147 @@ function Home() {
 
   return (
     <>
-      {/* ---------------- Centered Ultra-Wide Minimalist Hero ---------------- */}
-      <section className="hero-gradient relative overflow-hidden px-5 pb-16 pt-16 sm:px-8 sm:pb-24 sm:pt-24 text-center">
-        {/* Dynamic Parallax Tech Elements & Mouse Spotlight Glow */}
-        <HeroBackground />
-        <div className="circuit-lines pointer-events-none absolute inset-0 opacity-80 [mask-image:radial-gradient(ellipse_75%_65%_at_50%_0%,#000_40%,transparent_100%)]" />
-        <div className="grid-lines pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_40%,transparent_100%)]" />
+    
+    {/* ---------------- Premium Hero ---------------- */}
+<section className="hero-gradient relative isolate min-h-[92vh] overflow-hidden px-5 pb-20 pt-12 text-center sm:px-8 sm:pb-24 sm:pt-16 lg:min-h-[94vh]">
+  {/* Background effects */}
+  <HeroBackground />
 
-        <div className="relative mx-auto flex max-w-4xl flex-col items-center">
-          {/* Giant Display Title */}
-          <h1 className="mt-8 text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight animate-rise [animation-delay:80ms] sm:text-6xl lg:text-7xl">
-            Where ideas <span className="text-gradient">fuse</span> into technology.
-          </h1>
+  <div className="circuit-lines pointer-events-none absolute inset-0 opacity-80 [mask-image:radial-gradient(ellipse_75%_70%_at_50%_10%,#000_35%,transparent_100%)]" />
 
-          {/* Subtitle */}
-          <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground animate-rise [animation-delay:160ms] sm:text-xl">
-            {club.name} is the student-run technical collective at {club.university}. Six domains,
-            one calendar of workshops and hackathons, and a mentorship ladder running unbroken since {club.foundedYear}.
-          </p>
+  <div className="grid-lines pointer-events-none absolute inset-0 opacity-30 [mask-image:radial-gradient(ellipse_70%_65%_at_50%_0%,#000_30%,transparent_100%)]" />
 
-          {/* Call to Actions */}
-          <div className="mt-10 flex flex-col gap-4 animate-rise [animation-delay:240ms] sm:flex-row sm:items-center">
-            <Link
-              to="/events"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground transition-transform duration-300 hover:scale-[1.04] shadow-[0_0_25px_rgba(217,72,15,0.4)]"
-            >
-              Explore events
-              <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-            <Link
-              to="/join"
-              className="glass pulse-glow inline-flex items-center justify-center rounded-full px-8 py-4 font-semibold text-foreground transition-colors hover:text-primary-glow"
-            >
-              Join the club
-            </Link>
-          </div>
+  {/* Main Hero */}
+  <div className="relative z-20 mx-auto flex min-h-[78vh] max-w-6xl flex-col items-center justify-center">
 
-          {/* Domain Badges Strip */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-2 animate-rise [animation-delay:300ms]">
-            {[
-              { name: "Web Dev", icon: <Code2 className="size-3.5 text-primary-glow" /> },
-              { name: "AI / ML", icon: <Cpu className="size-3.5 text-accent" /> },
-              { name: "Cybersecurity", icon: <Shield className="size-3.5 text-emerald-400" /> },
-              { name: "App Dev", icon: <Sparkles className="size-3.5 text-cyan-400" /> },
-              { name: "Cloud & DevOps", icon: <Terminal className="size-3.5 text-amber-400" /> },
-              { name: "UI/UX Design", icon: <Zap className="size-3.5 text-purple-400" /> },
-            ].map((d) => (
-              <span
-                key={d.name}
-                className="glass inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-mono text-xs text-foreground/90 border border-border/80"
-              >
-                {d.icon}
-                {d.name}
-              </span>
-            ))}
-          </div>
+    {/* Top decorative line */}
+    <div className="mb-8 flex items-center gap-3 animate-rise">
+      <span className="h-px w-10 bg-gradient-to-r from-transparent to-primary/70 sm:w-16" />
 
-          {/* Centered Stat Counters */}
-          <dl className="mt-16 grid w-full grid-cols-2 gap-8 border-t border-border/70 pt-12 sm:grid-cols-4">
-            {stats.map((s) => (
-              <StatCounter key={s.label} value={s.value} prefix={s.prefix} suffix={s.suffix} label={s.label} />
-            ))}
-          </dl>
+      <span className="font-mono text-[10px] uppercase tracking-[0.35em] text-primary-glow/80">
+        Tech Fusion Club
+      </span>
+
+      <span className="h-px w-10 bg-gradient-to-l from-transparent to-primary/70 sm:w-16" />
+    </div>
+
+    {/* Heading */}
+    <div className="relative">
+      {/* Heading glow */}
+      <div className="pointer-events-none absolute inset-x-10 top-1/2 -z-10 h-32 -translate-y-1/2 rounded-full bg-primary/20 blur-[90px]" />
+
+      <h1 className="max-w-5xl text-balance font-display text-4xl font-bold leading-[0.98] tracking-[-0.04em] animate-rise [animation-delay:80ms] sm:text-6xl lg:text-8xl">
+        Where ideas{" "}
+        <span className="relative inline-block">
+          <span className="text-gradient">fuse</span>
+
+          {/* animated underline */}
+          <span className="absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-primary via-accent to-primary animate-[heroLine_1.2s_ease-out_0.7s_forwards] sm:-bottom-2" />
+        </span>{" "}
+        into technology.
+      </h1>
+    </div>
+
+    {/* Subtitle */}
+    <p className="mt-8 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground animate-rise [animation-delay:160ms] sm:text-xl">
+      {club.name} is the student-run technical collective at {club.university}. Six domains,
+      one calendar of workshops and hackathons, and a mentorship ladder running unbroken since {club.foundedYear}.
+    </p>
+
+    {/* CTA */}
+    <div className="mt-10 flex flex-col gap-4 animate-rise [animation-delay:240ms] sm:flex-row sm:items-center">
+      <Link
+        to="/events"
+        className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground shadow-[0_0_35px_rgba(217,72,15,0.35)] transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_0_55px_rgba(217,72,15,0.55)]"
+      >
+        {/* button shine */}
+        <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+        <span className="relative">
+          Explore events
+        </span>
+
+        <ArrowRight className="relative size-4 transition-transform duration-300 group-hover:translate-x-1" />
+      </Link>
+
+      <Link
+        to="/join"
+        className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-border/80 bg-background/20 px-8 py-4 font-semibold text-foreground backdrop-blur-xl transition-all duration-300 hover:border-primary/50 hover:bg-primary/10 hover:text-primary-glow"
+      >
+        <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-primary/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+        <span className="relative">
+          Join the club
+        </span>
+
+        <ArrowUpRight className="relative size-4 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+      </Link>
+    </div>
+
+    {/* Domain badges */}
+    <div className="mt-12 flex max-w-4xl flex-wrap items-center justify-center gap-2.5 animate-rise [animation-delay:300ms]">
+      {[
+        { name: "Web Dev", icon: <Code2 className="size-3.5 text-primary-glow" /> },
+        { name: "AI / ML", icon: <Cpu className="size-3.5 text-accent" /> },
+        { name: "Cybersecurity", icon: <Shield className="size-3.5 text-emerald-400" /> },
+        { name: "App Dev", icon: <Sparkles className="size-3.5 text-cyan-400" /> },
+        { name: "Cloud & DevOps", icon: <Terminal className="size-3.5 text-amber-400" /> },
+        { name: "UI/UX Design", icon: <Zap className="size-3.5 text-purple-400" /> },
+      ].map((d, i) => (
+        <span
+          key={d.name}
+          className="group inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-background/25 px-3.5 py-1.5 font-mono text-xs text-foreground/90 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-primary/10 hover:shadow-[0_8px_25px_rgba(0,0,0,0.2)]"
+          style={{
+            animationDelay: `${350 + i * 70}ms`,
+          }}
+        >
+          <span className="transition-transform duration-300 group-hover:scale-125">
+            {d.icon}
+          </span>
+
+          {d.name}
+        </span>
+      ))}
+    </div>
+
+    {/* Stats */}
+    <dl className="mt-16 grid w-full max-w-4xl grid-cols-2 overflow-hidden rounded-3xl border border-border/60 bg-background/15 backdrop-blur-md animate-rise [animation-delay:380ms] sm:grid-cols-4">
+      {stats.map((s, i) => (
+        <div
+          key={s.label}
+          className={`relative px-5 py-7 transition-colors duration-300 hover:bg-primary/[0.04] ${
+            i !== 0 ? "border-t border-border/50 sm:border-l sm:border-t-0" : ""
+          }`}
+        >
+          <StatCounter
+            value={s.value}
+            prefix={s.prefix ?? ""}
+            suffix={s.suffix ?? ""}
+            label={s.label}
+          />
         </div>
-      </section>
+      ))}
+    </dl>
+
+    {/* Bottom scroll indicator */}
+    <div className="mt-10 flex flex-col items-center gap-2 opacity-50 animate-rise [animation-delay:500ms]">
+      <span className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
+        Scroll
+      </span>
+
+      <span className="flex h-8 w-5 items-start justify-center rounded-full border border-border/70 p-1">
+        <span className="h-1.5 w-1 rounded-full bg-primary-glow animate-[scrollDot_1.8s_ease-in-out_infinite]" />
+      </span>
+    </div>
+  </div>
+
+  {/* Bottom fade */}
+  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+</section>
 
       {/* ---------------- NEW SECTION: The 4 Core Pillars of Tech Fusion ---------------- */}
-      <Section>
-        <SectionHeading
-          eyebrow="The Framework"
-          title="Four Pillars of Tech Fusion Club"
-          body="How our technical collective operates week after week to produce industry-ready student engineers."
-        />
-        <div className="mt-12">
-          <Reveal>
-            <PillarsSection />
-          </Reveal>
-        </div>
-      </Section>
+      {/* ---------------- FOUR PILLARS ---------------- */}
+      <PillarsSection />
 
       {/* ---------------- Mission ---------------- */}
       <Section>
@@ -339,3 +402,5 @@ function Home() {
     </>
   );
 }
+
+
