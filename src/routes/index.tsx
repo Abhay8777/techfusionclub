@@ -660,7 +660,7 @@ function Home() {
     <>
       {/* ---------------- Premium Hero ---------------- */}
 
-      <section className="hero-gradient relative isolate min-h-[92vh] overflow-hidden px-5 pb-20 pt-12 text-center sm:px-8 sm:pb-24 sm:pt-16 lg:min-h-[94vh]">
+      <section className="hero-gradient relative isolate min-h-screen overflow-x-clip overflow-y-visible px-5 pb-20 pt-12 text-center sm:px-8 sm:pb-24 sm:pt-16">
         <HeroBackground />
 
         <div className="circuit-lines pointer-events-none absolute inset-0 opacity-80 [mask-image:radial-gradient(ellipse_75%_70%_at_50%_10%,#000_35%,transparent_100%)]" />
@@ -818,7 +818,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+        
       </section>
 
       {/* ---------------- FOUR PILLARS ---------------- */}

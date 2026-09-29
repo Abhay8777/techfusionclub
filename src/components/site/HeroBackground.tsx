@@ -355,7 +355,7 @@ export function HeroBackground() {
     <>
       {floatingLogo}
 
-      <div className="pointer-events-none absolute inset-0 overflow-visible select-none">
+      <div className="pointer-events-none absolute inset-x-0 -top-24 bottom-0 overflow-visible select-none sm:-top-28">
         {/* ==========================================
             MOUSE SPOTLIGHT
         ========================================== */}

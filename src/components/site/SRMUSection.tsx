@@ -104,16 +104,7 @@ export function SRMUSection() {
             </div>
           </div>
 
-          {/* Bottom Identity */}
-          <div className="mt-16 flex flex-col gap-4 border-t border-border/60 pt-7 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-              Tech Fusion Club × Shri Ramswaroop Memorial University
-            </p>
-
-            <p className="text-xs text-muted-foreground">
-              Learn. Build. Collaborate. Ship.
-            </p>
-          </div>
+          
         </div>
 
         {/* Large Background SRMU Text */}
